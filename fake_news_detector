@@ -1,0 +1,22 @@
+import numpy as np
+import pandas as pd
+import itertools
+from sklearn.model_selection import train_test_split
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.linear_model import PassiveAggressiveClassifier
+from sklearn.metrics import accuracy_score, confusion matrix
+
+# Read the data (Add file name and path below. Find data on https://data-flair.training/blogs/advanced-python-project-detecting-fake-news/ )
+df = pd.read_csv('')
+
+# Get shape and head (Is a print statement needed? Or logging?)
+df.shape
+df.head()
+
+# DataFlair - Get the labels
+labels = df.label
+labels.head()
+
+# DataFlair - Split the dataset
+x_train, x_test, y_train, y_test = train_test_split(df('test'), labels, test_size=0.2, random_state=7)
+
